@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sketch Gallery</title>
+<style>
+  :root {
+    color-scheme: dark;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #0c0c0e;
+    color: #eee;
+    font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  header {
+    padding: 48px 24px 24px;
+    text-align: center;
+  }
+  header h1 {
+    margin: 0 0 8px;
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+  header p {
+    margin: 0;
+    color: #999;
+    font-size: 0.95rem;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+  }
+  .card {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    background: #17171a;
+    border: 1px solid #2a2a2e;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: border-color 0.15s ease, transform 0.15s ease;
+  }
+  .card:hover {
+    border-color: #555;
+    transform: translateY(-2px);
+  }
+  .preview {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    background: #000;
+    overflow: hidden;
+  }
+  .preview iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    pointer-events: none;
+  }
+  .card-body {
+    padding: 16px 18px 18px;
+  }
+  .card-body h2 {
+    margin: 0 0 6px;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+  .card-body p {
+    margin: 0;
+    font-size: 0.88rem;
+    line-height: 1.4;
+    color: #aaa;
+  }
+  .open-hint {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: #7aa2ff;
+  }
+  footer {
+    text-align: center;
+    padding: 32px 24px 48px;
+    color: #666;
+    font-size: 0.82rem;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Sketch Gallery</h1>
+  <p>Visual generativi in p5.js — clicca su un'anteprima per aprirlo a schermo intero</p>
+</header>
+
+<div class="grid">
+
+  <a class="card" href="psi_points.html">
+    <div class="preview"><iframe src="psi_points.html" tabindex="-1"></iframe></div>
+    <div class="card-body">
+      <h2>Psi Points</h2>
+      <p>Griglia di cerchi mossi da rumore di Perlin, colori che scorrono attraverso lo spettro cromatico — effetto fluido e psichedelico.</p>
+      <span class="open-hint">Schermo intero →</span>
+    </div>
+  </a>
+
+  <a class="card" href="sand_art_v1.html">
+    <div class="preview"><iframe src="sand_art_v1.html" tabindex="-1"></iframe></div>
+    <div class="card-body">
+      <h2>Sand Art</h2>
+      <p>Accumulo di sedimenti che formano una roccia: fasce orizzontali dai contorni morbidi, in toni sedimentari, con trama granulosa.</p>
+      <span class="open-hint">Schermo intero →</span>
+    </div>
+  </a>
+
+  <a class="card" href="paint_brush.html">
+    <div class="preview"><iframe src="paint_brush.html" tabindex="-1"></iframe></div>
+    <div class="card-body">
+      <h2>Paint Brush</h2>
+      <p>Pennellate irregolari a "setole" che si accumulano nel tempo al centro della tela, palette ispirata a un paesaggio di mare.</p>
+      <span class="open-hint">Schermo intero →</span>
+    </div>
+  </a>
+
+</div>
+
+<footer>
+  Sketch p5.js — apri una card per la versione a schermo intero
+</footer>
+
+</body>
+</html>
